@@ -1,8 +1,9 @@
 import React from "react";
 
+
 const PageWrapper = ({ loading, error, loaderComp, children }) => {
     if (loading) {
-        return loaderComp;
+        return loaderComp? loaderComp: <div>... loading</div>;
     }
 
     if (error) {

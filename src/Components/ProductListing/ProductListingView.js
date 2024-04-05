@@ -30,10 +30,6 @@ export default function ProductListingView({products}) {
             </div>
         ))}
     </div>
-    <div className="mt-4 flex justify-between">
-                <button onClick={null} disabled={1 === 1}>Previous</button>
-                <button onClick={null}>Next</button>
-            </div>
 </div>
   )
 }

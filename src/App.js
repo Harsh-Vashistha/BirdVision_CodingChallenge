@@ -7,18 +7,18 @@ import ProductListing from './Components/ProductListing';
 import ProductDetails from './Components/ProductDetails';
 import OfflineWrapper from './Wrapper/OfflineWrapper';
 
-import NoRoute from "./Components/ErrorPage";
+import ErrorPage from "./Components/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <ProductListing />,
-    errorElement: <NoRoute />,
+    errorElement: <ErrorPage />,
   },
   {
     path:"/products/:productId",
     element: <ProductDetails />,
-    errorElement: <NoRoute />,
+    errorElement: <ErrorPage />,
   },
 ]);
 
