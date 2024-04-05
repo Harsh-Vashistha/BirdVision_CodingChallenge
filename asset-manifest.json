@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/BirdVision_CodingChallenge/static/css/main.191a8111.css",
+    "main.js": "/BirdVision_CodingChallenge/static/js/main.06687be5.js",
+    "static/js/453.d7df779b.chunk.js": "/BirdVision_CodingChallenge/static/js/453.d7df779b.chunk.js",
+    "index.html": "/BirdVision_CodingChallenge/index.html",
+    "main.191a8111.css.map": "/BirdVision_CodingChallenge/static/css/main.191a8111.css.map",
+    "main.06687be5.js.map": "/BirdVision_CodingChallenge/static/js/main.06687be5.js.map",
+    "453.d7df779b.chunk.js.map": "/BirdVision_CodingChallenge/static/js/453.d7df779b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.191a8111.css",
+    "static/js/main.06687be5.js"
+  ]
+}
