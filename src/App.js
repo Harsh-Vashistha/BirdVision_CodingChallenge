@@ -5,7 +5,6 @@ import {
 } from "react-router-dom";
 import ProductListing from './Components/ProductListing';
 import ProductDetails from './Components/ProductDetails';
-import OfflineWrapper from './Wrapper/OfflineWrapper';
 
 import ErrorPage from "./Components/ErrorPage";
 
