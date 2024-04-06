@@ -27,7 +27,7 @@ const App = () => {
   return (
      <div className="container mx-auto p-4">
       <OfflineWrapper>
-      <RouterProvider router={router} />
+      <RouterProvider router={router}  basename="/BirdVision_CodingChallenge"/>
       </OfflineWrapper>
      </div>
 
