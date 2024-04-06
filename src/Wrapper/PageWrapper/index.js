@@ -2,9 +2,7 @@ import React from "react";
 
 
 const PageWrapper = ({ loading, error, loaderComp, children }) => {
-    if (loading) {
-        return loaderComp? loaderComp: <div>... loading</div>;
-    }
+
 
     if (error) {
         return (
@@ -15,6 +13,10 @@ const PageWrapper = ({ loading, error, loaderComp, children }) => {
             </div>
         </div>
         );
+    }
+
+    if (loading) {
+        return loaderComp? loaderComp: <div>... loading</div>;
     }
 
     return children;

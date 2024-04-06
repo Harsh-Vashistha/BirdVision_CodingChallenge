@@ -4,10 +4,12 @@ import Pagination from "../Pagination";
 import get from 'lodash/get'
 import isEmpty from "lodash/isEmpty";
 import ProductsListingLoader from "../../Loaders/ProductsListing";
+import PageWrapper from "../../Wrapper/PageWrapper";
 
 const ProductListing = () => {
     const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
+    const [error, setError]=useState(null)
     const ref=useRef({ totalPages: 0 });
     const productsPerPage = 10;
 
@@ -26,22 +28,19 @@ const ProductListing = () => {
       .then((data)=>{
       setProducts(get(data,'products',[]));
       ref.current.totalPages=get(data,'total',0)/productsPerPage;
-      console.log("data is ",data)
       }).catch (error=>{
-        console.error('Error fetching product details:', error);
+        setError(error)
       })
     };
 
-    if(isEmpty(products)){
-        return (
-           <ProductsListingLoader/>
-        )
-    }
- 
+
+
     return (
         <div>
+          <PageWrapper error={error}  loading={isEmpty(products)} loaderComp={<ProductsListingLoader/>}>
             <ProductListingView products={products}/>
             <Pagination currentPage={currentPage} totalPages={ ref.current.totalPages} onPageChange={onPageChange} />
+          </PageWrapper>
         </div>
     );
     
