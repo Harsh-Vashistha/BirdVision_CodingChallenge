@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-  createBrowserRouter,
-  RouterProvider,
+  createHashRouter,
+  RouterProvider
 } from "react-router-dom";
 import ProductListing from './Components/ProductListing';
 import ProductDetails from './Components/ProductDetails';
@@ -9,7 +9,7 @@ import OfflineWrapper from './Wrapper/OfflineWrapper';
 
 import ErrorPage from "./Components/ErrorPage";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <ProductListing />,
